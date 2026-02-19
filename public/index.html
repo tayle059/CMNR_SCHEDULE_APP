@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colonial Manor Nursing and Rehab | Schedule Board</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Colonial Manor Nursing and Rehab</h1>
+      <p>12-Hour Shift Board (7a-7p / 7p-7a), Pickup Portal, and Call-In Tracking</p>
+    </header>
+
+    <main>
+      <section class="card" id="authCard">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input id="loginEmail" type="email" placeholder="Email" required />
+          <input id="loginPassword" type="password" placeholder="Password" required />
+          <button type="submit">Log In</button>
+        </form>
+
+        <hr />
+
+        <h2>New User Sign Up</h2>
+        <form id="signupForm">
+          <input id="signupName" placeholder="Full Name" required />
+          <input id="signupEmail" type="email" placeholder="Email" required />
+          <input id="signupPassword" type="password" placeholder="Password" required />
+          <select id="signupRole">
+            <option value="normal">Normal User</option>
+            <option value="admin">Admin User</option>
+          </select>
+          <input id="signupInvite" placeholder="Admin Invite Code (if admin)" />
+          <button type="submit">Create Account</button>
+        </form>
+      </section>
+
+      <section class="card hidden" id="appCard">
+        <div class="row-between">
+          <h2 id="welcome"></h2>
+          <button id="logoutBtn" class="danger">Log Out</button>
+        </div>
+
+        <h3>Coverage Calendar</h3>
+        <p class="muted">Red dates still need coverage.</p>
+        <div class="calendar-grid">
+          <div>
+            <h4>Nurse Coverage Needed</h4>
+            <ul id="nurseCoverageList" class="coverage-list"></ul>
+          </div>
+          <div>
+            <h4>CNA Coverage Needed</h4>
+            <ul id="cnaCoverageList" class="coverage-list"></ul>
+          </div>
+        </div>
+
+        <div id="adminPanel" class="hidden">
+          <h3>Admin: Create Open Shift</h3>
+          <form id="createShiftForm" class="grid-form">
+            <input type="date" id="shiftDate" required />
+            <select id="shiftType" required>
+              <option value="Day 7a-7p">Day 7a-7p</option>
+              <option value="Night 7p-7a">Night 7p-7a</option>
+            </select>
+            <input type="text" id="shiftUnit" placeholder="Unit" required />
+            <select id="shiftRole" required>
+              <option value="CNA">CNA</option>
+              <option value="Nurse">Nurse</option>
+            </select>
+            <button type="submit">Create Shift</button>
+          </form>
+        </div>
+
+        <h3>Current Shifts</h3>
+        <div id="shiftList"></div>
+      </section>
+    </main>
+
+    <div id="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

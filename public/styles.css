@@ -1,0 +1,129 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: #0c4a6e;
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+main {
+  max-width: 960px;
+  margin: 1.2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+input,
+select,
+button {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+button {
+  background: #0369a1;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+button.danger {
+  background: #b91c1c;
+}
+
+.shift {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.shift .actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.muted {
+  color: #475569;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.coverage-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.coverage-list li {
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  margin-bottom: 0.45rem;
+}
+
+.coverage-list .needs-coverage {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  font-weight: 700;
+}
+
+.coverage-list .covered {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+#toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: #111827;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .calendar-grid {
+    grid-template-columns: 1fr;
+  }
+}
