@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "fullName": "CMNR Admin",
+      "email": "admin@colonialmanor.local",
+      "passwordHash": "598fa715d5fed4e384e01d32c36e5a0a:750954b90f8b40d2d5dd64a254c95f8ca2076e41175bfad518c8ced72831c674d7494ab7c9e297f80cac1528e840e768d24cd9bcc067bf5004bba366d67e289f",
+      "role": "admin",
+      "createdAt": "2026-02-19T00:00:00.000Z"
+    }
+  ],
+  "shifts": [
+    {
+      "id": "10000000-0000-0000-0000-000000000001",
+      "date": "2026-02-20",
+      "shiftType": "Day 7a-7p",
+      "unit": "Skilled Nursing",
+      "neededRole": "CNA",
+      "status": "open",
+      "pickedByUserId": null,
+      "callInReason": null,
+      "createdAt": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000002",
+      "date": "2026-02-20",
+      "shiftType": "Night 7p-7a",
+      "unit": "Skilled Nursing",
+      "neededRole": "Nurse",
+      "status": "open",
+      "pickedByUserId": null,
+      "callInReason": null,
+      "createdAt": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000003",
+      "date": "2026-02-21",
+      "shiftType": "Day 7a-7p",
+      "unit": "Memory Care",
+      "neededRole": "CNA",
+      "status": "open",
+      "pickedByUserId": null,
+      "callInReason": null,
+      "createdAt": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000004",
+      "date": "2026-02-21",
+      "shiftType": "Night 7p-7a",
+      "unit": "Memory Care",
+      "neededRole": "Nurse",
+      "status": "open",
+      "pickedByUserId": null,
+      "callInReason": null,
+      "createdAt": "2026-02-19T00:00:00.000Z"
+    }
+  ]
+}

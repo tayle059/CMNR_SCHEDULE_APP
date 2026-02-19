@@ -1,0 +1,10 @@
+{
+  "name": "cmnr-schedule-app",
+  "version": "1.0.0",
+  "description": "Colonial Manor Nursing and Rehab shift board",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
