@@ -247,7 +247,9 @@ const server = http.createServer(async (req, res) => {
       if (shift.pickedByUserId !== user.id && user.role !== 'admin') {
         return json(res, 403, { message: 'Only the assigned user or admin can call in this shift.' });
       }
-      shift.status = 'call-in';
+      // Re-open called-in shifts so another eligible user can pick them up.
+      shift.status = 'open';
+      shift.pickedByUserId = null;
       shift.callInReason = body.reason || 'No reason provided.';
       writeDb(db);
       return json(res, 200, { message: 'Call in recorded successfully.' });
